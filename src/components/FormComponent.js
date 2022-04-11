@@ -87,7 +87,7 @@ class FormComponent extends Component {
                     <Col md={6}>
                         <FormGroup>
                             <Field
-                                type="text"
+                                type="number"
                                 name="phone_number"
                                 component={renderField}
                                 label="Phone Number :"
