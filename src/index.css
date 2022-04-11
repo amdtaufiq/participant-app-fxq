@@ -11,3 +11,24 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.btn-size {
+  width: 40px !important;
+}
+
+.btn-size:hover {
+  color: white !important;
+}
+
+.float-right {
+  float: right;
+}
+
+.loader {
+  margin-left: 50%;
+  margin-top: 25%;
+}
+
+.vertical-center{
+  padding: 20px 10px !important;
+}

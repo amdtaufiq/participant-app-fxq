@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import HomeContainer from "./containers/HomeContainer";
+import CreateParticipantContainer from "./containers/CreateParticipantContainer";
+import DetailParticipantContainer from "./containers/DetailParticipantContainer";
+import EditParticipantContainer from "./containers/EditParticipantContainer";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends Component {
+  render() {
+    return (
+      <div>
+        <Router>
+          <Routes>
+            <Route
+              exact
+              path="/"
+              element={<HomeContainer />}
+            />
+            <Route
+              exact
+              path="/create"
+              element={<CreateParticipantContainer />}
+            />
+            <Route
+              exact
+              path="/detail/:id"
+              element={<DetailParticipantContainer />}
+            />
+            <Route
+              exact
+              path="/edit/:id"
+              element={<EditParticipantContainer />}
+            />
+          </Routes>
+        </Router>
+      </div>
+    );
+  }
 }
-
-export default App;
