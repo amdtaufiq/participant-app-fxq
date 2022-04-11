@@ -21,7 +21,7 @@ const ParticipantValidation = (values) => {
     let email = String(values.email).toLocaleLowerCase()
     let regex = new RegExp('[a-z0-9]+@[a-z]+\.[a-z]{2,3}');
     if (!regex.test(email)){
-      errors.phone_number = "Email format does not match";
+      errors.email = "Email format does not match";
     }
 
     if (!values.phone_number || values.phone_number === "") {
